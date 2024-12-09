@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FaPinterestP,FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa6";
 import { VscDebugRestart } from "react-icons/vsc";
 
-const footerLinks = [{title:'About', path:"/about"}, {title:'New',path:"/menu"},{title:'Partners',path:"/"},{title:'Team',path:"/chefs"},{title:'Menu',path:"/"},{title:'Contact',path:'/'}]
+const footerLinks = [{title:'About', path:"/about"}, {title:'New',path:"/menu"},{title:'Partners',path:"/"},{title:'Team',path:"/chefs"},{title:'Menu',path:"/menu"},{title:'Contact',path:'/contact'}]
 
 const linkHelp = ['FAQ','Term & conditions','Reporting','Documentation','Support Policy','Privacy',]
 
@@ -62,16 +62,10 @@ service in major cities across World.</p>
           <ul className="space-y-4 mt-6">
           {linkHelp.map((link)=>(
               <li>
-              <a href='javascript:void(0)' className='text-sm hover:underline'>{link}</a>
+              <a href={'/faq'} className='text-sm hover:underline'>{link}</a>
             </li>
           ))}
           </ul>
-        </div>
-
-        <div className="max-lg:min-w-[140px]">
-          <h4 className=" font-semibold text-base relative max-sm:cursor-pointer">Recent Post</h4>
-
-       
         </div>
 
       </div>

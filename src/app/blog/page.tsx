@@ -17,9 +17,9 @@ const BlogData =[
     {image:blog1,date:"10 February 2022" ,title:"pallentesque non efficitur mi aliquam convallis mi quis"},
     {image:blog2, date:"10 February 2022",title:"morbi sodales telkues eilit, in biandit risus suscipit a "},
     {image:blog3, date:"10 February 2022", title:"curabitur rutum velit ac congue malesuade"},
-    {image:blog4, date:"10 February 2022"},
-    {image:blog5, date:"10 February 2022"},
-    {image:blog6, date:"10 February 2022"},
+    {image:blog4, date:"10 February 2022", title:"curabitur rutum velit ac congue malesuade"},
+    {image:blog5, date:"10 February 2022",title:"curabitur rutum velit ac congue malesuade"},
+    {image:blog6, date:"10 February 2022",title:"curabitur rutum velit ac congue malesuade"},
 ]
 
 export default function Blog() {
