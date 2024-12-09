@@ -18,7 +18,7 @@ const LinksData:Data[] =[
     {name:"Blog", path:"/blog" },
     {name:"Chefs", path:"/chefs" },    
     {name:"About", path: "/about" },    
-    {name:"Shop", path:"/shopcart" },    
+    {name:"Shop", path:"/shop" },    
     {name:"Contact", path:"/contact" },    
 
 ]
@@ -52,7 +52,7 @@ export default function Header() {
           <div><FaShoppingBag className="text-white mt-5 max-sm:mt-2 max-sm:mb-2"/></div>
             <div className="border bg-black flex justify-evenly  px-1 py-1 rounded-full max-w-md mx-auto font-[sans-serif] max-sm:mx-2 text-white">
         <input type='email' placeholder='Search Something...' className="w-full outline-none bg-black pl-4 text-sm" />
-        <FaSearch className="text-3xl transition-all text-white mt-2  rounded-full px-5 py-2.5" />
+       <button> <Link href={"/shopcart"} className="hover:cursor-pointer"><FaSearch className="text-3xl  transition-all text-white mt-2  rounded-full px-5 py-2.5" /></Link></button>
       </div>
             </div>
       <Sheet >
