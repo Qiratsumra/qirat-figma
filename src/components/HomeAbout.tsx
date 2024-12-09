@@ -10,7 +10,7 @@ const AboutUsSection = () => {
       <div className="container mx-auto grid md:grid-cols-2 gap-8">
         {/* Text Section */}
         <div>
-          <h2 className="text-orange-500 text-lg font-semibold mb-2">About us</h2>
+          <h2 className="text-orange-500 text-lg font-semibold mb-2 great-vibes-regular">About us</h2>
           <h1 className="text-4xl font-bold mb-4">
             We Create the best <span className="text-orange-500">foody product</span>
           </h1>
