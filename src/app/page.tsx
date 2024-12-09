@@ -9,13 +9,14 @@ import Blog from "@/components/ui/Blog";
 import Testimormals from "@/components/ui/Testimormals";
 import Main2 from "@/components/ui/Main2";
 import About1 from "@/components/ui/About1";
+import AboutUsSection from "@/components/HomeAbout";
 
 
 export default function Home() {
   return (
    <div className="bg-gradient-to-r from-black to-gray-900">
      <HeroSection/>
-    <About1/>
+    <AboutUsSection/>
 
 <ChooseItem/>
 <ChooseItemtwo/>

@@ -12,8 +12,8 @@ export default function About1() {
       <Image src={about1} alt="--" className="w-full h-full object-cover shrink-0" />
         <div className="m-3">
             <h1 className="great-vibes-regular text-2xl text-orange-500 text-center ">About us</h1>
-          <h2 className="sm:text-4xl text-2xl font-bold uppercase m-5 text-black " >food is an important part of a balance diet</h2>
-          <p className="mt-4 text-sm m-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan, nuncet
+          <h2 className="sm:text-4xl text-2xl font-bold uppercase m-5 text-slate-500 " >food is an important part of a balance diet</h2>
+          <p className="mt-4 text-sm m-5 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan, nuncet
             tempus blandit, metus mi consectetur nibh, a pharetra felis turpis vitae ligula. Etiam laoreet velit nec neque
             ultrices, non consequat mauris tincidunt.</p>
           <button type="button"
