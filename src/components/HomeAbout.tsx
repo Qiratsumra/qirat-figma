@@ -6,7 +6,7 @@ import homeabou3 from "../../public/unsplash_mAQZ3X_8_l0.png"
 
 const AboutUsSection = () => {
   return (
-    <section className="bg-black text-white py-12 px-6">
+    <section className="bg-gradient-to-r from-black to-gray-900 text-white py-12 px-6">
       <div className="container mx-auto grid md:grid-cols-2 gap-8">
         {/* Text Section */}
         <div>
