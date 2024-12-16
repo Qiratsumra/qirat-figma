@@ -8,7 +8,7 @@ export default function Chefs() {
     <div className="bg-gradient-to-r from-black to-gray-900">
 
 <div className="font-[sans-serif] lg:max-w-5xl sm:max-w-2xl max-sm:max-w-sm mx-auto mt-4">
-            <h2 className="text-gray-800 text-3xl font-extrabold border-b-2 border-gray-800 inline-block">Our Team</h2>
+            <h2 className="text-orange-500 text-3xl font-extrabold border-b-2 border-orange-500 great-vibes-regular inline-block">Our Team</h2>
 
             <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-6 max-md:justify-center mt-12">
                 <div className="flex justify-evenly items-center bg-gray-900 p-4 rounded-lg relative">

@@ -18,7 +18,7 @@ const LinksData:Data[] =[
     {name:"Blog", path:"/blog" },
     {name:"Chefs", path:"/chefs" },    
     {name:"About", path: "/about" },    
-    {name:"Shop", path:"/shop" },    
+    {name:"Shop", path:"/shops" },    
     {name:"Contact", path:"/contact" },    
 
 ]
@@ -48,11 +48,11 @@ export default function Header() {
         </ul>
       </div>
       {/* search bar */}
-      <div className="flex justify-center gap-5">
-          <div><FaShoppingBag className="text-white mt-5 max-sm:mt-2 max-sm:mb-2"/></div>
-            <div className="border bg-black flex justify-evenly  px-1 py-1 rounded-full max-w-md mx-auto font-[sans-serif] max-sm:mx-2 text-white">
-        <input type='email' placeholder='Search Something...' className="w-full outline-none bg-black pl-4 text-sm" />
-       <button> <Link href={"/shopcart"} className="hover:cursor-pointer"><FaSearch className="text-3xl  transition-all text-white mt-2  rounded-full px-5 py-2.5" /></Link></button>
+      <div className="flex justify-center gap-10">
+         <div className="flex justify-evenl gap-4"><Link href={'/shopcart'} className="text-white mt-2 max-sm:mt-2 max-sm:mb-2">  <FaShoppingBag className="text-white  max-sm:mt-2 max-sm:mb-2"/></Link>
+            <div className="border bg-transparent flex justify-evenly  px-1 py-1 rounded-full max-w-md mx-auto font-[sans-serif] max-sm:mx-2 text-white">
+        <input type='email' placeholder='Search Something...' className="w-full outline-none bg-transparent rounded-md pl-4 text-sm" />
+        <button className="text-white font-thin"><FaSearch/></button>
       </div>
             </div>
       <Sheet >
@@ -73,6 +73,7 @@ export default function Header() {
               </SheetContent>
             </Sheet>
     </div>
+</div>
   </header>
   )
 }
