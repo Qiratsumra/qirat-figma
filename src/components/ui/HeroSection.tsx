@@ -1,5 +1,6 @@
 import Image from "next/image";
 import hero from "../../../public//hero/hero.png"
+import Link from "next/link";
 
 
 
@@ -21,7 +22,7 @@ export default function HeroSection() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue.
         </p>
         <button className="px-5 py-3 font-medium text-black bg-orange-500 rounded-lg hover:bg-orange-800">
-          See Menu
+        <Link href={'/menu'}>See Menu</Link>
         </button>
       </div>
 

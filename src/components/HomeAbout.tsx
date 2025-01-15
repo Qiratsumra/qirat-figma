@@ -3,6 +3,7 @@ import Image from "next/image";
 import homeabou1 from "../../public/homeAbout1.png"
 import homeabou2 from "../../public/unsplash_jpkfc5_d-DI.png"
 import homeabou3 from "../../public/unsplash_mAQZ3X_8_l0.png"
+import Link from "next/link";
 
 const AboutUsSection = () => {
   return (
@@ -37,7 +38,7 @@ const AboutUsSection = () => {
           </ul>
           {/* Button */}
           <button className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600">
-            Read More
+           <Link href={'/about'}> Read More</Link>
           </button>
         </div>
 

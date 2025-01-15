@@ -89,18 +89,20 @@ export default function ShopCart() {
 <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-sm:justify-center mt-12 max-sm:max-w-xs mx-auto m-5">
                     {
                         shopCartData.map((data)=>(
-                            <div className="border-[1px] ">
-                           <div className="overflow-hidden group">
-                           <Image src={data.image} alt={`${data.title}`} className="group-hover:scale-125 transition-all duration-300 w-[312px] h-[267px] object-cover rounded-lg" />
+                          <div className="border-[1px] snipcart-add-item">
+                        <button>
+                        <div className="overflow-hidden group">
+                          <Image src={data.image} alt={`${data.title}`} className="group-hover:scale-125 transition-all duration-300 w-[312px] h-[267px] object-cover rounded-lg" />
+                          </div>
+   
+                           <div className="text-start mt-4 ml-5">
+                               <h4 className="text-base font-semibold text-black">{data.title}</h4>
+                               <p className="text-[15px] mt-2 text-orange-400">{data.price}</p>
+                               <Link href={"/checkout"} > <button className="text-xl hover:cursor-pointer">Buy Now
+                               </button></Link>
                            </div>
-    
-                            <div className="text-start mt-4 ml-5">
-                                <h4 className="text-base font-semibold text-black">{data.title}</h4>
-                                <p className="text-[15px] mt-2 text-orange-400">{data.price}</p>
-                                <Link href={"/checkout"} > <button className="text-xl hover:cursor-pointer">Buy Now
-                                </button></Link>
-                            </div>
-                        </div>
+                        </button>
+                       </div>
                         ))
                     }          
                 </div>

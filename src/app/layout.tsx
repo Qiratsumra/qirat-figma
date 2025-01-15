@@ -30,6 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+
+      <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.0/default/snipcart.css" />
+
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"></link>
@@ -37,9 +40,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
+       <Header/>
         {children}
-        <Footer/>
+        <script async src="https://cdn.snipcart.com/themes/v3.5.0/default/snipcart.js"></script>
+        <div hidden id="snipcart" data-config-modal-style="side" data-api-key="M2RjOGM2NDEtNjk4OC00MDI5LTg5NzItMWFmNjIwZmNjZWQ5NjM4NzE3Mzk1MzQ3NTA4ODg3"></div>
+      <Footer/>
       </body>
     </html>
   );
