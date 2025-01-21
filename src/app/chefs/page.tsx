@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 
-
-
 import hero from '../../../public/unsplash_4ycv3Ky1ZZU.png'
 
 import imageUrlBuilder from '@sanity/image-url'
@@ -11,13 +9,14 @@ import { SanityClient } from "@/sanity/sanity.client";
 
 
 const builder = imageUrlBuilder(SanityClient)
+
 export  function urlFor(source:any) {
     return builder.image(source)
   }
 
 
 export default async function Chefs() {
- const data= await SanityClient.fetch(groq `*[_type=='chef']`);
+ const data= await SanityClient.fetch(groq `*[_type=='chef']{name,position,experience,specialty,description, "image":image.asset->url}`);
     console.log(data);
   return (
     <div>
