@@ -7,19 +7,23 @@ import imageUrlBuilder from '@sanity/image-url'
 import { groq } from "next-sanity";
 import { SanityClient } from "@/sanity/sanity.client";
 
+ 
 
-const builder = imageUrlBuilder(SanityClient)
+export const urlFor = (source: any) => imageUrlBuilder(SanityClient).image(source);
 
-export  function urlFor(source:any) {
-    return builder.image(source)
-  }
+
+// const builder = imageUrlBuilder(SanityClient)
+
+// export  function urlFor(source:any) {
+//     return builder.image(source)
+//   }
 
 
 export default async function Chefs() {
  const data= await SanityClient.fetch(groq `*[_type=='chef']{name,position,experience,specialty,description, "image":image.asset->url}`);
     console.log(data);
   return (
-    <div>
+    
         <div className="font-sans">
             <div className=" mx-auto">
             <div className='relative py-14 font-[sans-serif]'>
@@ -70,6 +74,6 @@ export default async function Chefs() {
                 </div>
             </div>
         </div>
-</div>
+
   )
 }
