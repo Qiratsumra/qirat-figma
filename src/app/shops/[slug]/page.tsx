@@ -1,6 +1,6 @@
 "use client"
 
-import sanityClient from '@/sanity/sanity.client';
+import {SanityClient} from '@/sanity/sanity.client';
 import { groq } from 'next-sanity';
 import { useParams } from 'next/navigation';
 import imageUrlBuilder from '@sanity/image-url'
@@ -25,7 +25,7 @@ interface Product {
   };
 }
 
-const builder = imageUrlBuilder(sanityClient)
+const builder = imageUrlBuilder(SanityClient)
 export  function urlFor(source:any) {
     return builder.image(source)
   }
@@ -36,7 +36,7 @@ export default async function page() {
   const {quantity, increaseQunatity,decreaseQuantity, addProductToCart, cartItem}:any = useContext(createCartContext);
   console.log(cartItem);
         const {slug} = useParams();
-    const data= await sanityClient.fetch(groq `*[_type=='food']`);
+    const data= await SanityClient.fetch(groq `*[_type=='food']`);
     
     const product = data.find((product:any)=>product.slug.current === slug);
     console.log(product);
@@ -45,7 +45,7 @@ export default async function page() {
   try {
     const query = `*[_type == 'food']{
     _id,title,originalPrice,price,description,image,tags}`;
-    const data = await sanityClient.fetch(query);
+    const data = await SanityClient.fetch(query);
     setProducts(data);
   } catch (error) {
     console.log(`Error Fetching Products:${error}`);
