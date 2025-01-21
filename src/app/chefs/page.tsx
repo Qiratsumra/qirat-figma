@@ -1,21 +1,23 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
+
 import hero from '../../../public/unsplash_4ycv3Ky1ZZU.png'
 
 import imageUrlBuilder from '@sanity/image-url'
-import sanityClient from "@/sanity/sanity.client";
 import { groq } from "next-sanity";
+import { SanityClient } from "@/sanity/sanity.client";
 
 
-const builder = imageUrlBuilder(sanityClient)
+const builder = imageUrlBuilder(SanityClient)
 export  function urlFor(source:any) {
     return builder.image(source)
   }
 
 
 export default async function Chefs() {
- const data= await sanityClient.fetch(groq `*[_type=='chef']`);
+ const data= await SanityClient.fetch(groq `*[_type=='chef']`);
     console.log(data);
   return (
     <div>
