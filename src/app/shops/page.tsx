@@ -61,7 +61,7 @@ export default async function  Shops() {
       {/* Image Section */}
       <div className="relative h-2/3">
         <img
-          src={urlFor(items.image).url()}
+          src={items.image}
           alt={items.name}
           className="w-full h-full object-cover"
         />

@@ -67,7 +67,7 @@ export default async function page() {
  
  <div> 
 <img
-         src={urlFor(product.image).url()}
+         src={product.image}
          alt={product.name}
          className="w-full h-full object-cover"
        />
