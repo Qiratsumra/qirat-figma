@@ -3,7 +3,7 @@
 import {SanityClient} from '@/sanity/sanity.client';
 import { groq } from 'next-sanity';
 import { useParams } from 'next/navigation';
-// import imageUrlBuilder from '@sanity/image-url'
+import imageUrlBuilder from '@sanity/image-url'
 import { useContext, useEffect, useState} from "react"
 import { createCartContext } from '../../context/CartContext';
 type CartItem = {
@@ -25,10 +25,10 @@ interface Product {
   };
 }
 
-// const builder = imageUrlBuilder(SanityClient)
-// export  function urlFor(source:any) {
-//     return builder.image(source)
-//   }
+const builder = imageUrlBuilder(SanityClient)
+export  function urlFor(source:any) {
+    return builder.image(source)
+  }
 
 export default async function page() {
     const [products, setProducts] = useState<CartItem[]>([]);
