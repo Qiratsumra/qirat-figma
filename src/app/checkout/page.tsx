@@ -5,7 +5,7 @@ import hero from "../../../public/unsplash_4ycv3Ky1ZZU.png"
 import homeabou2 from "../../../public/unsplash_jpkfc5_d-DI.png"
 import { useContext } from "react";
 import { createCartContext } from "../context/CartContext";
-import { urlFor } from '../chefs/page';
+// import { urlFor } from '../chefs/page';
 
 export default function page() {
   const { cartItem, totalQuantity, toggleCartItemQuantity, removeItemsFromCart }: any = useContext(createCartContext);
@@ -105,7 +105,7 @@ export default function page() {
  
               <div  className=" items-center gap-4">
                  <img
-                                    src={urlFor(items.image).url()}
+                                    src={items.image}
                                     alt={items.name}
                                     className="w-full h-full object-contain"
                                   />

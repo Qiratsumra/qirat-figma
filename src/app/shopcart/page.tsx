@@ -1,7 +1,7 @@
 'use client';
 
 import { useContext } from 'react';
-import { urlFor } from '../chefs/page';
+// import { urlFor } from '../chefs/page';
 import { createCartContext } from '../context/CartContext';
 import Link from 'next/link';
 

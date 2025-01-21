@@ -11,9 +11,9 @@ import { SanityClient } from "@/sanity/sanity.client";
 
 const builder = imageUrlBuilder(SanityClient)
 
-export  function urlFor(source:any) {
-    return builder.image(source)
-  }
+// export  function urlFor(source:any) {
+//     return builder.image(source)
+//   }
 
 
 export default async function Chefs() {
