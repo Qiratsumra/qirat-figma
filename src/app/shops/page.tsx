@@ -4,16 +4,16 @@ import Link from "next/link"
 import Image from "next/image"
 import hero from "../../../public/unsplash_4ycv3Ky1ZZU.png"
 
-import imageUrlBuilder from '@sanity/image-url'
+// import imageUrlBuilder from '@sanity/image-url'
 import {  Slug } from 'sanity';
 import {SanityClient} from "@/sanity/sanity.client";
 import { groq } from "next-sanity";
 
 
-const builder = imageUrlBuilder(SanityClient)
-export  function urlFor(source:any) {
-    return builder.image(source)
-  }
+// const builder = imageUrlBuilder(SanityClient)
+// export  function urlFor(source:any) {
+//     return builder.image(source)
+//   }
   
   interface IProduct {
     name:string,
