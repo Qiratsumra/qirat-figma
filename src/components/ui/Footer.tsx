@@ -72,7 +72,7 @@ service in major cities across World.</p>
 
       <hr className="mt-10 mb-6 border-gray-400" />
       <div className="flex justify-between max-md:block gap-9">
-      <p className=' text-2xl text-white'>Copyright © 2022 by Ayeman. All Rights Reserved.</p>
+      <p className=' text-2xl text-white'>Copyright © 2022 by Qirat. All Rights Reserved.</p>
         <ul className="flex md:flex justify-evenly gap-5 ">
           <li>
            <FaFacebookF className="p-2  bg-white text-black text-4xl hover:cursor-pointer "/>

@@ -1,25 +1,22 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import chef1 from "../../../public/ChefsProfile/chef1.png"
-import chef2 from "../../../public/ChefsProfile/chef2.png"
-import chef3 from "../../../public/ChefsProfile/chef3.png"
-import chef4 from "../../../public/ChefsProfile/chef4.png"
-import chef5 from '../../../public/ChefsProfile/chef5.png'
-import chef6 from "../../../public/ChefsProfile/chef6.png"
-import chef7 from "../../../public/ChefsProfile/chef7.png"
-import chef8 from "../../../public/ChefsProfile/chef8.png"
-import chef9 from "../../../public/ChefsProfile/chef9.png"
-import chef10 from "../../../public/ChefsProfile/chef10.png"
-import chef11 from "../../../public/ChefsProfile/chef11.png"
-import chef12 from "../../../public/ChefsProfile/chef12.png"
-import hero from "../../../public/unsplash_4ycv3Ky1ZZU.png"
+import hero from '../../../public/unsplash_4ycv3Ky1ZZU.png'
 
-const chefsData =[{image:chef1,name:"Tahmina Rumi"}, {image:chef2,name:"Jorinn Begum"}, {image:chef3,name:"M.Mohammad"}, {image:chef4,name:"Munna Kethy"},{image:chef5,name:"John"}, {image:chef6,name:"Bisnu Devgon"}, {image:chef7,name:"Motin Molladon"},{image:chef8,name:"Willium"},{image:chef9,name:"Kets Willium Roy"},{image:chef10, name:"Muhmud Khodil"},{image:chef11, name:"Atuar Rehman"},{image:chef12,name:"Monalisa Holly"},
-]
+import imageUrlBuilder from '@sanity/image-url'
+import sanityClient from "@/sanity/sanity.client";
+import { groq } from "next-sanity";
 
 
-export default function page() {
+const builder = imageUrlBuilder(sanityClient)
+export  function urlFor(source:any) {
+    return builder.image(source)
+  }
+
+
+export default async function Chefs() {
+ const data= await sanityClient.fetch(groq `*[_type=='chef']`);
+    console.log(data);
   return (
     <div>
         <div className="font-sans">
@@ -46,16 +43,26 @@ export default function page() {
     </div>
     </div>
     </div>
+
+
                 <div className="grid sm:grid-cols-4 gap-8 max-sm:justify-center mt-12 max-sm:max-w-xs mx-12 my-4">
                     {
-                        chefsData.map((chef)=>(
-                            <div className="">
-                            <Image src={chef.image} alt="" className="w-full object-contain object-top rounded-lg" />
-    
-                            <div className="text-center mt-4">
-                                <h4 className="text-base font-semibold text-black">{chef.name}</h4>
-                                <p className="text-xs mt-2 text-black">Chef</p>
+                        data.map((chef:any)=>(
+                          <div className="bg-white font-sans">
+                          <div >
+                          <div className="bg-white cursor-pointer rounded-lg overflow-hidden shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] relative group">
+                            <img src={urlFor(chef.image).url()} alt="Blog Post 1" className="w-full h-96 object-cover" />
+                            <div className="p-6 absolute bottom-0 left-0 right-0 bg-orange-500 opacity-90">
+                              <span className="text-sm block text-gray-800 mb-2">Chef: {chef.name}</span>
+                              <h3 className="text-xl font-bold text-gray-800">{chef.position}</h3>
+                              <div className="h-0 overflow-hidden group-hover:h-16 group-hover:mt-4 transition-all duration-300">
+                                <p className="text-gray-800 text-sm">{chef.description}</p>
+                                <p className="text-gray-800 text-sm">Experience: {chef.experience}years</p>
+                              </div>
                             </div>
+                          </div>
+                    
+                        </div>
                         </div>
                         ))
                     }          

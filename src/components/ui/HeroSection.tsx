@@ -22,7 +22,7 @@ export default function HeroSection() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue.
         </p>
         <button className="px-5 py-3 font-medium text-black bg-orange-500 rounded-lg hover:bg-orange-800">
-        <Link href={'/menu'}>See Menu</Link>
+        <Link href={'/shops'}>See Menu</Link>
         </button>
       </div>
 

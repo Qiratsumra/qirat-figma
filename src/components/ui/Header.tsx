@@ -1,11 +1,13 @@
+'use client'
 import { Menu } from "lucide-react";
 import Link from "next/link"
 import {  Sheet, SheetContent, SheetDescription,SheetHeader,SheetTitle,SheetTrigger,} from "@/components/ui/sheet";
 
-import About from "./page"
 
 import { FaShoppingBag } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import SearchBar from "../SearchBar";
+
 
 interface Data{
     name: string,
@@ -14,8 +16,8 @@ interface Data{
 
 const LinksData:Data[] =[
     { name:'Home', path:'/' },
-    { name:'Menu', path:'/menu'},
-    {name:"Blog", path:"/blog" },
+    // { name:'Menu', path:'/menu'},
+    // {name:"Blog", path:"/blog" },
     {name:"Chefs", path:"/chefs" },    
     {name:"About", path: "/about" },    
     {name:"Shop", path:"/shops" },    
@@ -25,7 +27,7 @@ const LinksData:Data[] =[
 
 
 export default function Header() {
-  
+ 
   return (
     <header className='shadow-md bg-gradient-to-r from-black to-gray-900 font-sans tracking-wide relative z-50'>
     <section
@@ -49,11 +51,9 @@ export default function Header() {
       </div>
       {/* search bar */}
       <div className="flex justify-center gap-10">
-         <div className="flex justify-evenl gap-4"><Link href={'/shopcart'} className="text-white mt-2 max-sm:mt-2 max-sm:mb-2">  <FaShoppingBag className="text-white  max-sm:mt-2 max-sm:mb-2"/></Link>
-            <div className="border bg-transparent flex justify-evenly  px-1 py-1 rounded-full max-w-md mx-auto font-[sans-serif] max-sm:mx-2 text-white">
-        <input type='email' placeholder='Search Something...' className="w-full outline-none bg-transparent rounded-md pl-4 text-sm" />
-        <button className="text-white font-thin"><FaSearch/></button>
-      </div>
+         <div className="flex justify-evenl gap-4">
+          <Link href={'/shopcart'} className="text-white mt-2 max-sm:mt-2 max-sm:mb-2">  <FaShoppingBag className="text-white  max-sm:mt-2 max-sm:mb-2"/></Link>
+          <SearchBar/>
             </div>
       <Sheet >
               <SheetTrigger className="md:hidden">

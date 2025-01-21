@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
-
+import { CartProvider } from "../app/context/CartContext";
 
 
 const geistSans = localFont({
@@ -40,11 +40,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       <Header/>
-        {children}
-        <script async src="https://cdn.snipcart.com/themes/v3.5.0/default/snipcart.js"></script>
-        <div hidden id="snipcart" data-config-modal-style="side" data-api-key="M2RjOGM2NDEtNjk4OC00MDI5LTg5NzItMWFmNjIwZmNjZWQ5NjM4NzE3Mzk1MzQ3NTA4ODg3"></div>
+   
+   <Header/>
+   <CartProvider>{children}</CartProvider>
       <Footer/>
+      
+       
+     
       </body>
     </html>
   );

@@ -1,9 +1,14 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import hero from "../../../public/unsplash_4ycv3Ky1ZZU.png"
 import homeabou2 from "../../../public/unsplash_jpkfc5_d-DI.png"
+import { useContext } from "react";
+import { createCartContext } from "../context/CartContext";
+import { urlFor } from '../chefs/page';
 
 export default function page() {
+  const { cartItem, totalQuantity, toggleCartItemQuantity, removeItemsFromCart }: any = useContext(createCartContext);
   return (
     <div>
 
@@ -85,7 +90,7 @@ export default function page() {
               <button
                 type="button"
                 className="py-2 px-4 bg-gray-200 text-black rounded-md"
-              ><Link href={"/shops"}>Back to cart</Link></button>
+              ><Link href={"/shopcart"}>Back to cart</Link></button>
               <button type="submit" className="py-2 px-4 bg-yellow-500 text-white rounded-md">
                <Link href={'/shopcart'}> Proceed to shipping</Link> </button>
             </div>
@@ -93,46 +98,30 @@ export default function page() {
         </div>
 
         {/* Order Summary */}
-        <div>
+    {cartItem.map((items:any)=>(
+          <div>
           <h2 className="text-xl font-bold mb-6">Order Summary</h2>
           <div className="space-y-4">
-            {[1, 2, 3].map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <Image
-                  src={homeabou2}  alt="Chicken Tikka Kabab" width={83} height={88} className=" rounded-md"/>
+ 
+              <div  className=" items-center gap-4">
+                 <img
+                                    src={urlFor(items.image).url()}
+                                    alt={items.name}
+                                    className="w-full h-full object-contain"
+                                  />
                 <div>
-                  <p className="font-semibold">Chicken Tikka Kabab</p>
-                  <p className="text-sm text-gray-500">150 gm net, $50</p>
+                  <p className="font-semibold">{}</p>
+                  <p className="text-sm text-gray-500">${items.price}</p>
                 </div>
               </div>
-            ))}
+          
           </div>
-          <div className="mt-6 border-t pt-4">
-            <div className="flex justify-between">
-              <p>Sub-total</p>
-              <p>$130</p>
-            </div>
-            <div className="flex justify-between">
-              <p>Shipping</p>
-              <p>Free</p>
-            </div>
-            <div className="flex justify-between">
-              <p>Discount</p>
-              <p>25%</p>
-            </div>
-            <div className="flex justify-between">
-              <p>Tax</p>
-              <p>$54.76</p>
-            </div>
-            <div className="flex justify-between font-bold text-lg mt-2">
-              <p>Total</p>
-              <p>$432.65</p>
-            </div>
-          </div>
+        
           <button className="mt-6 w-full py-2 bg-yellow-500 text-white rounded-md">
             Place an order
           </button>
         </div>
+    ))}
       </div>
     </div>
 
