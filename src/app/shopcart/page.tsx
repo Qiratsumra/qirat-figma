@@ -1,7 +1,7 @@
 'use client';
 
 import { useContext } from 'react';
-// import { urlFor } from '../chefs/page';
+import { urlFor } from '@/sanity/sanity.client';
 import { createCartContext } from '../context/CartContext';
 import Link from 'next/link';
 
@@ -28,7 +28,7 @@ const Cart = () => {
               <div className="flex gap-4 px-4 py-6">
                 <div className="w-28 h-28 max-sm:w-24 max-sm:h-24 shrink-0">
                   <img
-                    src={item.image}
+                    src={urlFor(item.image).url()}
                     alt={item.name}
                     className="w-full h-full object-contain"
                   />

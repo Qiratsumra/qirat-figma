@@ -13,8 +13,7 @@ interface SearchResult {
   }
   
   export const searchQuery = `
-    *[_type == "food"] {_id,name,description,slug {current}
-    }
+    *[_type == "food"] {_id,name,description,slug {current}}
   `;
   export default function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('');

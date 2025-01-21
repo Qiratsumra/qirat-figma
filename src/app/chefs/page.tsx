@@ -6,14 +6,9 @@ import hero from '../../../public/unsplash_4ycv3Ky1ZZU.png'
 import imageUrlBuilder from '@sanity/image-url'
 import { groq } from "next-sanity";
 import { SanityClient } from "@/sanity/sanity.client";
+import { urlFor } from "@/sanity/sanity.client";
 
 
-
-const builder = imageUrlBuilder(SanityClient)
-
-// export  function urlFor(source:any) {
-//     return builder.image(source)
-//   }
 
 
 export default async function Chefs() {
