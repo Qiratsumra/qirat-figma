@@ -53,7 +53,7 @@ export default async function Chefs() {
                           <div className="bg-white font-sans">
                           <div >
                           <div className="bg-white cursor-pointer rounded-lg overflow-hidden shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] relative group">
-                            <img src={urlFor(chef.image).url()} alt="Blog Post 1" className="w-full h-96 object-cover" />
+                            <img src={chef.image} alt="Blog Post 1" className="w-full h-96 object-cover" />
                             <div className="p-6 absolute bottom-0 left-0 right-0 bg-orange-500 opacity-90">
                               <span className="text-sm block text-gray-800 mb-2">Chef: {chef.name}</span>
                               <h3 className="text-xl font-bold text-gray-800">{chef.position}</h3>
