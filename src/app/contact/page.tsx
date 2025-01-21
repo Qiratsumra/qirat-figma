@@ -3,10 +3,10 @@ import Head from 'next/head';
 export default function Contact() {
   return (
     <>
-      <Head>
+      
         <title>Contact Us - Food E-commerce</title>
         <meta name="description" content="Get in touch with us for any inquiries or support related to our food e-commerce platform." />
-      </Head>
+  
 
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">

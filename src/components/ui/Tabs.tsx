@@ -10,8 +10,7 @@ export default function Tabs() {
     const [activeTab, setActiveTab] = useState('Home'); // Default active tab
 
   return (
-    <div>
-
+    
  <div className="font-sans p-4">
     <ul className="flex justify-center max-sm:block">
     <li onClick={()=>setActiveTab('BreakFast')} className={`  ${activeTab === 'BreakFast' ? 'text-orange-500 border-b border-orange-500' : 'border-b border-black text-black'} font-bold text-base text-center py-3 px-6 border-b-2 cursor-pointer transition-all`}>BreakFast</li>
@@ -25,7 +24,5 @@ export default function Tabs() {
     <li onClick={()=>setActiveTab('Sack')} className={`  ${activeTab === 'Sack' ? 'text-orange-500 border-b border-orange-500' : 'border-b border-black text-black'} font-bold text-base text-center py-3 px-6 border-b-2 cursor-pointer transition-all`}>Sack</li>
     </ul>  
 </div> 
-
-</div>
   )
 }

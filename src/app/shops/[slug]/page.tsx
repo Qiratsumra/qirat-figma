@@ -59,8 +59,8 @@ export default async function page() {
 
 
   return (
-    <div>
-       <div>
+    
+       
        <div className="max-w-4xl mx-auto px-4 py-8">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     {/* Image Section */}
@@ -96,8 +96,8 @@ export default async function page() {
   </div>
 </div>
 
-       </div>
-    </div>
+       
+  
   )
 }
 

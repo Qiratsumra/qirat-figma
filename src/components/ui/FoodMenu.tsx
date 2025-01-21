@@ -3,7 +3,7 @@ import Tabs from "./Tabs"
 
 export default function FoodMenu() {
   return (
-    <div>
+   
   <div className="font-sans">
 <div>
     <h1 className="sm:text-4xl text-2xl font-bold capitalize m-5 text-center">our food items</h1>
@@ -98,7 +98,6 @@ export default function FoodMenu() {
 
 
 
-    </div>
     </div>
    
   )

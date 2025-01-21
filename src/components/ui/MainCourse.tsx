@@ -4,7 +4,7 @@ import mainCourse from "../../../public/chooseGrid/one.png"
 
 export default function MainCourse() {
   return (
-    <div>
+   
     <div className="font-sans">
         <div className="p-4 lg:max-w-7xl max-w-xl max-lg:mx-auto">
             <div className="flex justify-evenly max-sm:block gap-12">
@@ -57,6 +57,6 @@ export default function MainCourse() {
 
                     </div>
                 </div>
-            </div>
+            
   )
 }

@@ -5,7 +5,7 @@ import comma from "../../../public/comma.png"
 
 export default function ClientReview() {
   return (
-    <div>
+    <>
         <div className="m-5 font-bold text-[50px]">
             <h1 className="text-base great-vibes-regular  text-orange-500 md:text-lg">Testimonial</h1>
             What our client our saying       </div>
@@ -52,6 +52,6 @@ export default function ClientReview() {
     </div>
 
 
-    </div>
+    </>
   )
 }

@@ -2,11 +2,11 @@ import Link from "next/link"
 
 import imageUrlBuilder from '@sanity/image-url'
 import { Image, Slug } from 'sanity';
-import sanityClient from "@/sanity/sanity.client";
+import  {SanityClient} from "@/sanity/sanity.client";
 import { groq } from "next-sanity";
 
 
-const builder = imageUrlBuilder(sanityClient)
+const builder = imageUrlBuilder(SanityClient)
 export  function urlFor(source:any) {
     return builder.image(source)
   }
@@ -20,7 +20,7 @@ export  function urlFor(source:any) {
   }
 
   export default async function ProductsList(){
-    const data= await sanityClient.fetch(groq `*[_type=='food']`);
+    const data= await SanityClient.fetch(groq `*[_type=='food']`);
     console.log(data);
     return(
         <div className="font-[sans-serif] py-4 mx-auto lg:max-w-4xl max-w-lg md:max-w-full">

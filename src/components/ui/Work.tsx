@@ -9,7 +9,7 @@ import { GiCupcake } from "react-icons/gi";
 
 export default function Work() {
   return (
-    <div>
+    <>
          <div className="flex justify-evenly">
      <h1 className="text-4xl font-bold text-center">We are work with best people</h1>
      
@@ -38,6 +38,6 @@ export default function Work() {
     
        </div>
 
-    </div>
+    </>
   )
 }

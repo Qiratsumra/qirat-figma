@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function StarterMenu() {
   return (
-    <div>
+    
         <div className="font-sans">
             <div className="p-4 lg:max-w-7xl max-w-xl max-lg:mx-auto">
                 <div className="flex justify-evenly max-sm:block gap-12">
@@ -55,6 +55,5 @@ export default function StarterMenu() {
 
                         </div>
                     </div>
-                </div>
   )
 }

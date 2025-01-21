@@ -19,7 +19,7 @@ const chefsData =[{image:chef1,name:"Tahmina Rumi"}, {image:chef2,name:"Jorinn B
 
 export default function About2() {
   return (
-    <div>
+    <>
         {/* Text Section */}
         <div className="">
             <h1 className="sm:text-4xl text-2xl font-bold capitalize m-5 text-center text-orange-500">why choose us</h1>
@@ -94,7 +94,7 @@ export default function About2() {
       </div>
     </div>
 
-    </div>
+    </>
  
 
   )

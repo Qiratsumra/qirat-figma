@@ -6,8 +6,6 @@ import Main2 from "./Main2"
 
 export default function Testimormals() {
   return (
-    <div>
-
 <div className="font-[sans-serif] max-w-[800px] h-auto p-6 rounded-lg mx-auto shadow-[0_6px_18px_-6px_rgba(193,195,248)] bg-white relative mt-12">
       <Image src={testimormals} alt="testimormals" className="w-16 h-16 rounded-full absolute right-0 left-0 mx-auto -top-7" />
       <div className="mt-6 text-center">
@@ -50,6 +48,5 @@ export default function Testimormals() {
       </div>
     </div>
 
-    </div>
   )
 }
