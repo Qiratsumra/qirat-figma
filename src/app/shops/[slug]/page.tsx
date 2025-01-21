@@ -1,11 +1,12 @@
 "use client"
-
+import Image from 'next/image';
 import {SanityClient} from '@/sanity/sanity.client';
 import { groq } from 'next-sanity';
 import { useParams } from 'next/navigation';
-import imageUrlBuilder from '@sanity/image-url'
 import { useContext, useEffect, useState} from "react"
 import { createCartContext } from '../../context/CartContext';
+import { urlFor } from '@/sanity/sanity.client';
+
 type CartItem = {
   id: string;
   name: string;
@@ -25,10 +26,6 @@ interface Product {
   };
 }
 
-const builder = imageUrlBuilder(SanityClient)
-export  function urlFor(source:any) {
-    return builder.image(source)
-  }
 
 export default async function page() {
     const [products, setProducts] = useState<CartItem[]>([]);
@@ -40,6 +37,8 @@ export default async function page() {
     
     const product = data.find((product:any)=>product.slug.current === slug);
     console.log(product);
+
+    const imageURL =urlFor({slug})
   //
  const fetchProducts = async()=>{
   try {
@@ -67,7 +66,7 @@ export default async function page() {
  
  <div> 
 <img
-         src={product.image}
+         src={urlFor(product.image).url()}
          alt={product.name}
          className="w-full h-full object-cover"
        />
