@@ -1,5 +1,5 @@
 'use client'
-import sanityClient from '@/sanity/sanity.client';
+import  {SanityClient} from '@/sanity/sanity.client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
@@ -30,7 +30,7 @@ interface SearchResult {
   
       try {
         setLoading(true);
-        const searchResults = await sanityClient.fetch(searchQuery, {
+        const searchResults = await SanityClient.fetch(searchQuery, {
           searchQuery: `*${searchValue}*`
         });
         setResults(searchResults);
