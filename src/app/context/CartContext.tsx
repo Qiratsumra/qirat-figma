@@ -38,6 +38,7 @@ export const CartProvider = ({ children }: any) => {
         }
         return cartProduct; // Added return for non-matching products
       });
+      alert('Product added successfully')
       setCartItems(updateCartItems);
     } else {
       product.quantity = quantity;
