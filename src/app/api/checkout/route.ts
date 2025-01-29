@@ -60,8 +60,8 @@ export const POST = async (request: any) => {
     const session = await stripe.checkout.sessions.create({
       line_items: stripeLineItems,
       mode: "payment",
-      success_url: `http://localhost:3000/success`,
-      cancel_url: `http://localhost:3000/cancel`,
+      success_url: `https://qirat-figma-payment.vercel.app/success`,
+      cancel_url: `https://qirat-figma-payment.vercel.app/cancel`,
     });
 
     // ✅ 5. Return the correct session URL
