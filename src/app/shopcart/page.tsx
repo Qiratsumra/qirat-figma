@@ -17,27 +17,27 @@ const Cart = () => {
   const { cartItem, totalQuantity, toggleCartItemQuantity, removeItemsFromCart,quantity }: any = useContext(createCartContext);
 
 
-   const handleCheckout = async () => {
-      try {
-          const response = await fetch(`/api/checkout`,{
-            method:'POST',
-            headers:{
-              "Content-Type":"application/json"
-            },
-            body:JSON.stringify({products:cartItem}),
-          });
-          const data = await response.json();
-          if(data.url){
-            window.location.href = data.url
-          }
-          console.log(response);
+  //  const handleCheckout = async () => {
+  //     try {
+  //         const response = await fetch(`/api/checkout`,{
+  //           method:'POST',
+  //           headers:{
+  //             "Content-Type":"application/json"
+  //           },
+  //           body:JSON.stringify({products:cartItem}),
+  //         });
+  //         const data = await response.json();
+  //         if(data.url){
+  //           window.location.href = data.url
+  //         }
+  //         console.log(response);
           
-      } catch (error) {
-        console.error("Error during checkout", error)
-      }
+  //     } catch (error) {
+  //       console.error("Error during checkout", error)
+  //     }
       
       
-    }
+  //   }
 
 
   return (
@@ -107,12 +107,12 @@ const Cart = () => {
       ) : (
         <p className="text-center text-gray-600">Your cart is empty.</p>
       )}
-       <div><button className='w-full md:w-auto px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold shadow-lg hover:bg-orange-600 transition-all' onClick={handleCheckout}>Check out</button>
+       {/* <div><button className='w-full md:w-auto px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold shadow-lg hover:bg-orange-600 transition-all' onClick={handleCheckout}>Check out</button>
        <br />
        <br />
        <br />
       <Link href={"/shops" } className='w-full md:w-auto px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold shadow-lg hover:bg-orange-600 transition-all'>Shop More</Link>
-      </div>
+      </div> */}
     </div>
   );
 };
