@@ -1,8 +1,7 @@
 import Image from "next/image";
 import hero from "../../../public//hero/hero.png"
 import Link from "next/link";
-
-
+import ChatWidget from "../chat";
 
 
 export default function HeroSection() {
@@ -23,6 +22,12 @@ export default function HeroSection() {
         </p>
         <button className="px-5 py-3 font-medium text-black bg-orange-500 rounded-lg hover:bg-orange-800">
         <Link href={'/shops'}>See Menu</Link>
+        </button>
+
+        <button>
+          <ChatWidget/>
+
+
         </button>
       </div>
 
